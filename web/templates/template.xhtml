@@ -13,18 +13,15 @@
         <!-- Compiled and minified JavaScript -->
         <script src="js/materialize.js"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <style>
+            body{
+                background: #C2BDBA;
+            }
+        </style>
     </h:head>
 
     <h:body>
-
         <div id="page">
-
-            <div id="header">
-                <ui:insert name="header" >
-                    <ui:include src="/templates/header.xhtml" />
-                </ui:insert>
-            </div>
-
             <div id="content">
                 <ui:insert name="content" >
                     <ui:include src="/templates/content.xhtml" />
@@ -36,9 +33,7 @@
                     <ui:include src="/templates/footer.xhtml" />
                 </ui:insert>
             </div>
-
         </div>
-
     </h:body>
 </html>
 

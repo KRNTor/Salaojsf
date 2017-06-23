@@ -6,13 +6,11 @@
       xmlns:ui="http://java.sun.com/jsf/facelets">
     <h:head>
         <title>Salão</title>
-
     </h:head>
-    <h:body style="background: #C2BDBA">
+    <h:body>
         <ui:composition template="/templates/template.xhtml">
-            <ui:define name="header" ></ui:define>
             <ui:define name="content">
-                <div class="valign-wrapper" id="login-page">
+                <div class="valign-wrapper" id="login-page" style="margin-top: 10%; margin-left: 60%">
                     <div class="center-align">
                         <div class="row">
                             <div class="col s8 offset-s3">
@@ -38,7 +36,7 @@
                                                             <h:outputLabel for="tfsenha" value="Senha"/>
                                                         </div>
                                                         <div class="col s12 input-field">
-                                                            <h:commandLink id="btnLogin" value="Login" styleClass="btn btn-block" style="background: #1AB188" />
+                                                            <h:commandLink id="btnLogin" value="Login" styleClass="btn btn-block" style="background: #1AB188" action="#{navBean.navAccount}" />
                                                         </div>
                                                     </div>
                                                 </p:growl>
@@ -52,9 +50,7 @@
                 </div>
             </ui:define>
             <ui:define name="footer"></ui:define>
-
         </ui:composition>
-
         <script>
             $(document).on("ready", function () {
                 $('#login-page').css({'height': window.innerHeight + 'px'});
