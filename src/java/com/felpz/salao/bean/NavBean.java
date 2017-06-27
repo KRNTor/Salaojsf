@@ -34,4 +34,12 @@ public class NavBean {
         }
     }
 
+    public void navUserJoinin() {
+        try {
+            FacesContext.getCurrentInstance().getExternalContext().redirect("../pages/user/cadastro.xhtml");
+        } catch (IOException ex) {
+            Logger.getLogger(NavBean.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
 }

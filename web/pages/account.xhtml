@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
         <title>Home</title>
 
@@ -10,43 +11,45 @@
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
         <link rel="stylesheet" href="../css/materialize.min.css"/>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+        <!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>-->
         <script src="../js/materialize.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
     <h:body style="background: #e7e5e5">
-        <p:outputLabel id="testes" value="dasd"/>
-        <div>
-            <ul class="side-nav fixed" id="sidebar">
-                <li>
-                    <div class="userView">
-                        <div class="background" >
-                            <img src="../res/mount-fuji-4000x2501-lake-kawaguchiko-japan-hd-4k-5909.jpg" style="max-width: 100%"/>
-                        </div>
-                        <a href="#!user"><img class="circle" src="../res/profile-img.png"/></a>
-                        <a href="#!name"><span class="black-text name">Nome do Usuario</span></a>
-                        <a href="#!email"><span class="black-text email">email_usuario@gmail.com</span></a>
-                    </div>
-                </li>
-                <br/>
-                <br/>
-                <li><p:commandLink action="#{navBean.navAccount}"><i class="material-icons">query_builder</i>Agendamento</p:commandLink></li>
-                <li><p:commandLink><i class="material-icons">supervisor_account</i>Atendimento</p:commandLink></li>
-                <li><p:commandLink><i class="material-icons">perm_identity</i>Cliente</p:commandLink></li>
-                <li><p:commandLink><i class="material-icons">insert_chart</i> Fincança</p:commandLink></li>
-            </ul>
-        </div>
+        <ui:composition template="/templates/template.xhtml">
+            <ui:define name="content">
+                <div>
+                    <ul class="side-nav fixed" id="sidebar">
+                        <li>
+                            <div class="userView">
+                                <div class="background" >
+                                    <img src="../res/mount-fuji-4000x2501-lake-kawaguchiko-japan-hd-4k-5909.jpg" style="max-width: 100%"/>
+                                </div>
+                                <a href="#!user"><img class="circle" src="../res/profile-img.png"/></a>
+                                <a href="#!name"><span class="black-text name">Nome do Usuario</span></a>
+                                <a href="#!email"><span class="black-text email">email_usuario@gmail.com</span></a>
+                            </div>
+                        </li>
+                        <br/><br/>
+                        <li><p:commandLink><i class="material-icons">query_builder</i>Agendamento</p:commandLink></li>
+                        <li><h:commandLink><i class="material-icons">supervisor_account</i>Atendimento</h:commandLink></li>
+                        <li><a><i class="material-icons">perm_identity</i>Cliente</a></li>
+                        <li><a><i class="material-icons">insert_chart</i> Fincança</a></li>
+                    </ul>
+                </div>
 
-        <div class="fixed-action-btn horizontal click-to-toggle">
-            <a class="btn-floating btn-large grey pulse">
-                <i class="material-icons">menu</i>
-            </a>
-            <ul>
-                <li><a class="btn-floating grey"><i class="material-icons">settings</i></a></li>
-                <li><a class="btn-floating grey"><i class="material-icons">info_outline</i></a></li>
-                <li><a class="btn-floating grey"><i class="material-icons">clear</i></a></li>
-            </ul>
-        </div>
+                <div class="fixed-action-btn horizontal click-to-toggle">
+                    <a class="btn-floating btn-large grey pulse">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul>
+                        <li><a class="btn-floating grey"><i class="material-icons">settings</i></a></li>
+                        <li><a class="btn-floating grey"><i class="material-icons">info_outline</i></a></li>
+                        <li><a class="btn-floating grey"><i class="material-icons">clear</i></a></li>
+                    </ul>
+                </div>
+            </ui:define>
+        </ui:composition>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script>
@@ -54,11 +57,6 @@
                 $(".btn-felpz").sideNav();
             });
         </script>
-        <!--        <script>
-                    function myFunction() {
-                       $(".btn-felpz").sideNav();
-                    }
-                </script>-->
     </h:body>
 </html>
 

@@ -2,13 +2,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>Salão</title>
+        <title>Cadastrar Usuário</title>
     </h:head>
     <h:body>
-        <ui:composition template="/pages/templates/template.xhtml">
+        <ui:composition template="../templates/template.xhtml">
             <ui:define name="content">
                 <div class="valign-wrapper" id="login-page" style="margin-top: 10%; margin-left: 60%">
                     <div class="center-align">
@@ -18,7 +18,7 @@
                                     <div class="card-title">
                                         <div class="card" style="background: #24303C">
                                             <div class="card-content" style="background: #24303C">
-                                                <img class="responsive-img" style="max-width: 40px;" src="res/user_icon.png"/>
+                                                <img class="responsive-img" style="max-width: 40px;" src="../../res/user_icon.png"/>
                                             </div>
                                         </div>
                                     </div>
@@ -39,7 +39,7 @@
                                                             <h:commandLink id="btnLogin" value="Login" styleClass="btn btn-block" style="background: #1AB188" action="#{navBean.navAccount}" />
                                                         </div>
                                                         <div class="col s12 input-field">
-                                                            <h:commandLink id="btnJoin" style="color: #000; text-decoration: underline" value="Cadastrar-se" action="#{navBean.navUserJoinin}" />                                                      
+                                                            <h:commandLink id="btnJoin" style="color: #000; text-decoration: underline" value="Cadastrar-se" />                                                      
                                                         </div>
                                                     </div>
                                                 </p:growl>
